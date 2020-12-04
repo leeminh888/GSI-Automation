@@ -1,6 +1,6 @@
 name: Building GSI..
 
-on: [push]
+on: 
 #  release:
 #    types: [published]
 #  push:
