@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_LAVENDER_20.12.2_6b365f88f0_10.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: Miui_20.12.2_leeminh
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/9776e65996d77f1e54876b90c66fac6da68e4a63.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Vos_aris_proleeminh
   TZ: Asia/Kolkata
 jobs:
   build:
