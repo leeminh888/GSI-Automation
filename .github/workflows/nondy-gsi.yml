@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://download.c.realme.com/osupdate/RMX2185_11_OTA_0790_all_dsysIPFhgWAX.ozip
-  ROM_NAME: ColorOS
-  ZIP_NAME: RealmeUI-1.0-C11_TechyMinati
+  ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_LAVENDER_20.12.2_6b365f88f0_10.0.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: Miui_20.12.2_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
