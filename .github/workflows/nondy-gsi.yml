@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_RAPHAEL_20.12.2_89175e7dc2_10.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: MIUI_20.12.2_leeminh
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/9492d854f7499c03f5df46cb0d82ee61ee3bef37.zip
+  ROM_NAME: VOS
+  ZIP_NAME: Vos3_aris_2511_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/techyminati/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/Treble-Experience/ErfanGSIs-VelanGSIs.git ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
