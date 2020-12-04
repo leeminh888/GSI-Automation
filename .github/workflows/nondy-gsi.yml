@@ -1,18 +1,7 @@
 name: Building GSI..
 
-on: 
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
-    
+on: [push]
+
 env:
   ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_LAVENDER_20.12.2_6b365f88f0_10.0.zip
   ROM_NAME: MIUI
