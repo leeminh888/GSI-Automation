@@ -45,8 +45,8 @@ jobs:
        - name: Zip Aonly and upload 
          run: |
               mkdir final
-              sudo chmod -R 777 ErfanGSIs/output
-              cd ErfanGSIs/output
+              sudo chmod -R 777 working
+              cd ErfanGSIs/working
               zip -r $ZIP_NAME-GSI-Aonly.7z *-Aonly-*.img
               expect -c " 
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
@@ -65,7 +65,7 @@ jobs:
               interact"      
        - name: Zip AB and upload 
          run: |
-              cd ErfanGSIs/output
+              cd ErfanGSIs/working
               zip -r $ZIP_NAME-GSI-AB.7z *-AB-*.img
               expect -c " 
               spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
@@ -82,6 +82,6 @@ jobs:
               interact"
        - name: Print build info
          run: |
-              cat ErfanGSIs/output/*-Aonly-*.txt
+              cat ErfanGSIs/working/*-Aonly-*.txt
          
             
