@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/package/9492d854f7499c03f5df46cb0d82ee61ee3bef37.zip
-  ROM_NAME: VOS
-  ZIP_NAME: Vos3_aris_2511_leeminh
+  ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_CAS_20.12.2_47c0ecaa7f_11.0.zip
+  ROM_NAME: Miui
+  ZIP_NAME: Mi10ultra_25.12.2_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/dynamic.sh $ROM_URL $ROM_NAME
        
        - name: Zip Aonly and upload 
          run: |
