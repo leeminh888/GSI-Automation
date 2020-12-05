@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.12.2/miui_CAS_20.12.2_47c0ecaa7f_11.0.zip
+  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/miuimix/weekly/20.12.2/MMX_2.2.0_pyxis_20.12.2_v12-10.zip
   ROM_NAME: MIUI
-  ZIP_NAME: Mi10ultra_25.12.2_leeminh
+  ZIP_NAME: Mi19lite_25.12.2_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
