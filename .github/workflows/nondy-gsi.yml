@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus5Oxygen/OnePlus5Oxygen_23.J.69_GLO_069_2010292138/OnePlus5Oxygen_23_OTA_069_all_2010292138_6700.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: oneplus5_H10.0.1_leeminh
+  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/havoc-os/ocean/Havoc-OS-v3.11-20201122-ocean-Official.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Havoc_ocean_3.11_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
