@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://dl.hasaber.me/Hentai-Rika-chef/Beta/hentai_chef-ota-eng.rohanhasabe8-BETA-30-11-2020.zip
-  ROM_NAME: Generic
-  ZIP_NAME: MotoPower_Hentai_leeminh
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus5Oxygen/OnePlus5Oxygen_23.J.69_GLO_069_2010292138/OnePlus5Oxygen_23_OTA_069_all_2010292138_6700.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: oneplus5_H10.0.1_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
