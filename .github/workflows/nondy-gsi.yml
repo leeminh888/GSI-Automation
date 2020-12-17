@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/miuimix/weekly/20.12.2/MMX_2.2.0_pyxis_20.12.2_v12-10.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: Mi19lite_25.12.2_leeminh
+  ROM_URL: https://dl.hasaber.me/Hentai-Rika-chef/Beta/hentai_chef-ota-eng.rohanhasabe8-BETA-30-11-2020.zip
+  ROM_NAME: Generic
+  ZIP_NAME: MotoPower_Hentai_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
