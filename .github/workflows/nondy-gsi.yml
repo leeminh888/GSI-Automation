@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/havoc-os/ocean/Havoc-OS-v3.11-20201122-ocean-Official.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Havoc_ocean_3.11_leeminh
+  ROM_URL: https://android.googleapis.com/packages/data/ota-api/package/1d762d058df1fb7ef5c69d66e2510ef9c062e7c1.zip
+  ROM_NAME: VOS
+  ZIP_NAME: Vsmart_Joy4NFC_leeminh
   TZ: Asia/Kolkata
 jobs:
   build:
