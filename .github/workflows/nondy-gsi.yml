@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://android.googleapis.com/packages/data/ota-api/package/1d762d058df1fb7ef5c69d66e2510ef9c062e7c1.zip
-  ROM_NAME: VOS
-  ZIP_NAME: Vsmart_Joy4NFC_leeminh
+  ROM_URL: http://romdownload.nubia.com/%E7%BA%A2%E9%AD%945G/V9.19/NX659J-update.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Redmagic5S_V9.19
   TZ: Asia/Kolkata
 jobs:
   build:
