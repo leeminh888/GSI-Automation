@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: http://romdownload.nubia.com/%E7%BA%A2%E9%AD%945G/V9.19/NX659J-update.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Redmagic5S_V9.19
+  ROM_URL: https://hugeota.d.miui.com/20.12.28/miui_CEPHEUS_20.12.28_86a042409e_11.0.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: Cepheus_20.12.28
   TZ: Asia/Kolkata
 jobs:
   build:
