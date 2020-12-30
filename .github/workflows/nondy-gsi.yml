@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.12.28/miui_VIOLET_20.12.28_d19cdcf440_10.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: Violet_20.12.28
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/7e6ea71e1d2451c4899cfc76ae8563372286d148.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Aris_pro_vos4
   TZ: Asia/Kolkata
 jobs:
   build:
