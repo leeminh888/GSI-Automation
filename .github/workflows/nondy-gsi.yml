@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/package/a1f49d709ace137a86bb29e7be2f3db85077c391.zip
+  ROM_URL: https://versaweb.dl.sourceforge.net/project/vietnam-gsi/sgsi/vos4.zip
   ROM_NAME: Generic
-  ZIP_NAME: Aris_pro_vos4_A11
+  ZIP_NAME: Aris_vos4
   TZ: Asia/Kolkata
 jobs:
   build:
