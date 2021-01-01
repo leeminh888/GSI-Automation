@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://versaweb.dl.sourceforge.net/project/vietnam-gsi/sgsi/vos4.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Aris_vos4
+  ROM_URL: https://mor1.androidfilehost.com/dl/2WNL_I7bwok9RTAkO1V5vg/1609601011/17248734326145706204/xiaomi.eu_multi_HMNote7_20.12.28_v12-10.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: Rmnote7Miui12.5
   TZ: Asia/Kolkata
 jobs:
   build:
