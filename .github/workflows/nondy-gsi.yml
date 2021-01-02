@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://mor1.androidfilehost.com/dl/2WNL_I7bwok9RTAkO1V5vg/1609601011/17248734326145706204/xiaomi.eu_multi_HMNote7_20.12.28_v12-10.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: Rmnote7Miui12.5
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/a1f49d709ace137a86bb29e7be2f3db85077c391.zip
+  ROM_NAME: Generic
+  ZIP_NAME: testvos4
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL -d $ROM_NAME
        
        - name: Zip Aonly and upload 
          run: |
