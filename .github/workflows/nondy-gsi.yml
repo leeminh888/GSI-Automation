@@ -31,7 +31,7 @@ jobs:
 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/Treble-Experience/ErfanGSIs-VelanGSIs.git ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/leeminh888/AmyBakerTools.git ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
