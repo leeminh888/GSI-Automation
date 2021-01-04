@@ -3,9 +3,9 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/21.1.4/miui_VENUS_21.1.4_3874ca153d_11.0.zip
+  ROM_URL: https://hugeota.d.miui.com/20.12.30/miui_CEPHEUS_20.12.30_75aac5fba9_11.0.zip
   ROM_NAME: MIUI
-  ZIP_NAME: Mi11_21.1.4
+  ZIP_NAME: Cepheus_20.12.30
   TZ: Asia/Kolkata
 jobs:
   build:
