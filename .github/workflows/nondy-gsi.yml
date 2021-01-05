@@ -3,10 +3,10 @@ name: Build GSI..
 on: [push]
 
 env:
-  ROM_URL: https://ota.xiaomi-miui.gr/suktew23/roms/20.12.28/xiaomi-miui-hellas-XTRV-HMK30_20.12.28_v12-11.zip
-  ROM_NAME: MIUI
-  FZIPNAME: xiaomi-miui-hellas-XTRV-HMK30_20.12.28_v12-11.zip
-  ZIP_NAME: MIUI_HKM30_12.28
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/7301c6477d69d5c8bc1b428f633cd391e8341d11.zip
+  ROM_NAME: VOS
+  FZIPNAME: Vsmart_joy3_512021.zip
+  ZIP_NAME: Vsmart_joy3_1221
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -46,7 +46,7 @@ jobs:
               wget $ROM_URL &> /dev/null
               mkdir working
               mkdir output
-              sudo bash MIUIRDP.sh $ROM_NAME $FZIPNAME
+              sudo bash NUBIA-VOS-MIUIDP.sh $ROM_NAME $FZIPNAME
               sudo bash make.sh working/system $ROM_NAME AB output && sudo bash make.sh working/system $ROM_NAME Aonly output
        - name: Print build info
          run: |
