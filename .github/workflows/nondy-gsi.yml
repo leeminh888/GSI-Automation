@@ -3,10 +3,12 @@ name: Building GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.12.30/miui_CEPHEUS_20.12.30_75aac5fba9_11.0.zip
+  ROM_URL: https://ota.xiaomi-miui.gr/suktew23/roms/20.12.28/xiaomi-miui-hellas-XTRV-HMK30_20.12.28_v12-11.zip
   ROM_NAME: MIUI
-  ZIP_NAME: Cepheus_20.12.30
+  FZIPNAME: xiaomi-miui-hellas-XTRV-HMK30_20.12.28_v12-11.zip
+  ZIP_NAME: MIUI_HKM30_12.28
   TZ: Asia/Kolkata
+  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -17,31 +19,38 @@ jobs:
        
        - name: Clean Up
          run: |
-           docker rmi `docker images -q`
-           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
-           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
-           sudo -E apt-get update
-           sudo -E apt-get -y autoremove --purge
-           sudo -E apt-get clean 
+           docker rmi `docker images -q` &> /dev/null
+           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d &> /dev/null
+           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* &> /dev/null
+           sudo -E apt-get update &> /dev/null
+           sudo -E apt-get -y autoremove --purge &> /dev/null
+           sudo -E apt-get clean &> /dev/null
            
        - name: Initializing environment
          run: |
-            sudo -E apt-get -qq update
-            sudo -E apt-get -qq install git openjdk-8-jdk wget expect
-
+            sudo -E apt-get -qq update &> /dev/null
+            sudo -E apt-get -qq install git openjdk-8-jdk wget expect &> /dev/null 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/leeminh888/AmyBakerTools.git ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/leeminh888/AmyBakerTools.git &> /dev/null
        
        - name: Setting up ErfanGSI requirements
          run: |
               sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
-              sudo bash setup.sh
+              sudo bash setup.sh &> /dev/null
        
-       - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
-       
+       - name: Dynamic Setup
+         run: |
+              cd ErfanGSIs
+              wget $ROM_URL &> /dev/null
+              mkdir working
+              mkdir output
+              sudo bash MIUIRDP.sh $ROM_NAME $FZIPNAME
+              sudo bash make.sh working/system $ROM_NAME AB output && sudo bash make.sh working/system $ROM_NAME Aonly output
+       - name: Print build info
+         run: |
+              cat ErfanGSIs/output/*-AB-*.txt
        - name: Zip Aonly and upload 
          run: |
               mkdir final
