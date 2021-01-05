@@ -1,4 +1,4 @@
-name: Building GSI..
+name: Build GSI..
 
 on: [push]
 
