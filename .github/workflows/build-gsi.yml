@@ -3,10 +3,10 @@ name: Build GSI..
 on: [push]
 
 env:
-  ROM_URL: https://download.c.realme.com/osupdate/RMX2121_11_OTA_0170_all_IrbQNx72829t.ozip
-  ROM_NAME: ColorOS
-  FZIPNAME: RMX2121_11_OTA_0170_all.zip
-  ZIP_NAME: RMX2121_11_OTA_0170_all
+  ROM_URL: https://hugeota.d.miui.com/21.1.6/miui_LMI_21.1.6_3ad9b2f82d_11.0.zip
+  ROM_NAME: MIUI
+  FZIPNAME: miui_lmi_21.1.6.zip
+  ZIP_NAME: miui_lmi_21.1.6
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -46,7 +46,7 @@ jobs:
               wget $ROM_URL &> /dev/null
               mkdir working
               mkdir output
-              sudo bash COLOROS.sh $ROM_NAME $FZIPNAME
+              sudo bash dyn.sh $ROM_NAME $FZIPNAME
               sudo bash make.sh working/system $ROM_NAME AB output && sudo bash make.sh working/system $ROM_NAME Aonly output
        - name: Print build info
          run: |
