@@ -3,10 +3,10 @@ name: Build GSI..
 on: [push]
 
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/package/d79c90d8f94a249e0e91726c89d1460478487a2a.zip
-  ROM_NAME: VOS
-  FZIPNAME: d79c90d8f94a249e0e91726c89d1460478487a2a.zip
-  ZIP_NAME: Vsmart_aris_android11
+  ROM_URL: http://cdn-test-ota.blackshark.com/MBU-A0/20200320184204-mobius-ota-signed_by_xiaomi_3bb08f76617583d8b9e358f20339bade.zip
+  ROM_NAME: JoyUI
+  FZIPNAME: 20200320184204-mobius-ota-signed_by_xiaomi_3bb08f76617583d8b9e358f20339bade.zip
+  ZIP_NAME: Blackshark3pro
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
