@@ -3,10 +3,10 @@ name: Build GSI..
 on: [push]
 
 env:
-  ROM_URL: https://hugeota.d.miui.com/21.1.6/miui_LMI_21.1.6_3ad9b2f82d_11.0.zip
-  ROM_NAME: MIUI
-  FZIPNAME: miui_LMI_21.1.6_3ad9b2f82d_11.0.zip
-  ZIP_NAME: miui_lmi_21.1.6
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/d79c90d8f94a249e0e91726c89d1460478487a2a.zip
+  ROM_NAME: VOS
+  FZIPNAME: d79c90d8f94a249e0e91726c89d1460478487a2a.zip
+  ZIP_NAME: Vsmart_aris_android11
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
