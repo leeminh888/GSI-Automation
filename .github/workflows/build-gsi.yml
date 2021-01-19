@@ -32,7 +32,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget expect &> /dev/null 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/leeminh888/ErfanGSIs -b erfans-me &> /dev/null
+         run: git clone --recurse-submodules https://github.com/leeminh888/AmyBakerTools ErfanGSIs &> /dev/null
        
        - name: Setting up ErfanGSI requirements
          run: |
@@ -46,7 +46,7 @@ jobs:
               wget $ROM_URL &> /dev/null
               mkdir working
               mkdir output
-              sudo bash joyui.sh $ROM_NAME $FZIPNAME
+              sudo bash OOSDP.sh $ROM_NAME $FZIPNAME
               sudo bash make.sh working/system $ROM_NAME AB output && sudo bash make.sh working/system $ROM_NAME Aonly output
        - name: Print build info
          run: |
