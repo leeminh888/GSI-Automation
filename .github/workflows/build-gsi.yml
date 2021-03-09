@@ -31,6 +31,9 @@ jobs:
             sudo -E apt-get -qq update &> /dev/null
             sudo -E apt-get -qq install git openjdk-8-jdk wget expect &> /dev/null 
        
+        name: Clone ErfanGSI Source Code
+         run: git clone --recurse-submodules https://github.com/techyminati/ErfanGSIs
+       
        - name: Setting up ErfanGSI requirements
          run: |
               sudo chmod -R 777 ErfanGSIs
@@ -43,6 +46,7 @@ jobs:
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-AB-*.txt
+              
        - name: Zip Aonly and upload 
          run: |
               mkdir final
